@@ -15,7 +15,10 @@ def main() -> None:
     for tsv_file_name in tsv_file_names:
         with open(tsv_file_name, 'r') as tsv_file:
             vtt_file_name = replace_with_vtt_file_name(tsv_file_name)
-            os.remove(vtt_file_name)
+            try:
+                os.remove(vtt_file_name)
+            except OSError as err:
+                pass
             for contents in csv.reader(tsv_file, delimiter='\t'):
                 content = replace_contents(contents)
                 with open(vtt_file_name, 'a') as vtt_file:
