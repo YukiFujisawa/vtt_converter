@@ -10,4 +10,5 @@
 ## マニュアル
 
 Googleドライブの資料をご覧ください！
+
 [VTTファイル＆brightcoveアップ作業_Python版](https://docs.google.com/document/d/1Hm70Yf4esj388h0HnFjwYAjiA1sK61JqP9uBP7JGJQk/edit?usp=sharing)
