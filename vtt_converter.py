@@ -13,7 +13,7 @@ def replace_with_vtt_file_name(file_name: str) -> str:
 def main() -> None:
     tsv_file_names = glob.glob("./inputs/*.tsv")
     for tsv_file_name in tsv_file_names:
-        with open(tsv_file_name, 'r') as tsv_file:
+        with open(tsv_file_name, 'r',encoding='utf-8_sig') as tsv_file:
             vtt_file_name = replace_with_vtt_file_name(tsv_file_name)
             try:
                 os.remove(vtt_file_name)
